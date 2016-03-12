@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Setup fcron
+echo "root" > /etc/fcron/fcron.allow
+chmod 644 /etc/fcron/fcron.conf /etc/fcron/fcron.allow /etc/fcron/fcron.deny
+[ ! -f /run/fcron.pid ] || rm /run/fcron.pid
+exec /usr/sbin/fcron
+
 while [ ! -f /run/fcron.pid ]
 do
     echo "Waiting for fcron"
