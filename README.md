@@ -1,8 +1,8 @@
 ### Cron Container Starter
-#### [View on Docker Hub](https://hub.docker.com/r/jordancrawford/cron-container-starter/)
+#### [View on Docker Hub](https://hub.docker.com/r/jordancrawford/cron-container-starter-rpi/)
 This is a simple Docker image that starts local Docker containers based on a cron schedule.
 
-**This is based off [sillelien/tutum-cron](https://github.com/sillelien/tutum-cron) which does the same job but inside Tutum.**
+**This is based off [jordancrawfordnz/docker-cron-container-starter](https://bitbucket.org/jordancrawfordnz/docker-cron-container-starter).**
 
 #### Why would I want this?
 This is quite useful to run backups or other scheduled jobs. Rather than having each of these jobs in a container with their own cron schedules, you can use this image to keep all schedule job configuration in one place.
@@ -13,7 +13,7 @@ The Docker socket must be provided to the container as a volume at ``/var/run/do
 ``fcron`` is used to schedule this API call.
 
 #### Building
-Pull the repository and run: ``docker build -t jordancrawford/cron-container-starter``.
+Pull the repository and run: ``docker build -t jordancrawford/cron-container-starter-rpi .``.
 
 #### Running
 To run you must:
@@ -30,7 +30,7 @@ The easiest way to run the image is within Docker Compose. Below an example Dock
 ```
 cron-container-starter:
    container_name: cron-container-starter
-   image: jordancrawford/cron-container-starter
+   image: jordancrawford/cron-container-starter-rpi
    restart: always
    # Don't take a large portion of memory or CPU shares.
    cpu_shares: 128
@@ -42,7 +42,7 @@ cron-container-starter:
    volumes:
     - /var/run/docker.sock:/var/run/docker.sock
 test:
-   image: alpine
+   image: hypriot/rpi-alpine-scratch
    container_name: test
    command: 'echo On Schedule'
 ```
