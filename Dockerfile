@@ -6,4 +6,4 @@ RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/re
 
 COPY *.sh /
 RUN chmod 755 /run.sh
-#CMD /run.sh
+CMD /run.sh
