@@ -9,7 +9,7 @@
 # Cron Container Starter
 This is a simple Docker image that starts local Docker containers based on a cron schedule.
 
-**This is based off [jordancrawfordnz/docker-cron-container-starter](https://bitbucket.org/jordancrawfordnz/docker-cron-container-starter).**
+**This is based off [jordancrawfordnz/docker-cron-container-starter](https://github.com/jordancrawfordnz/docker-cron-container-starter).**
 
 ## Why would I want this?
 This is quite useful to run backups or other scheduled jobs. Rather than having each of these jobs in a container with their own cron schedules, you can use this image to keep all schedule job configuration in one place.
