@@ -1,8 +1,4 @@
-[View on Docker Hub](https://hub.docker.com/r/jordancrawford/cron-container-starter-rpi/)
-
-[View on GitHub](https://github.com/jordancrawfordnz/docker-cron-container-starter-rpi)
-
-[A version for x86 Systems](https://hub.docker.com/r/jordancrawford/cron-container-starter/)
+# [Project archived. Please use the arm builds on docker-cron-container-starter instead](https://github.com/jordancrawfordnz/docker-cron-container-starter)
 
 ---
 
